@@ -14,9 +14,10 @@ This is a UV workspace containing multiple AI framework projects. Each project h
 ```
 ai-lab/
 ├── pyproject.toml              # Workspace configuration
+├── uv.lock                     # Shared lockfile
 ├── .venv/                      # Shared virtual environment
 └── langchain_lab/              # LangChain project
-    └── pyproject.toml          # LangChain dependencies
+    └── pyproject.toml          # Project-specific dependencies
 ```
 
 ## Projects
@@ -36,10 +37,10 @@ Each project has complete setup instructions in its README:
 
 ## Workspace Reference
 
-Common commands for working with the UV workspace:
+Common commands for working with the UV workspace from the **root directory**:
 
 ```bash
-# Install specific project
+# Install specific project dependencies
 uv sync --package PROJECT_NAME
 
 # Add dependency to specific project  
