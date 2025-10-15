@@ -1,10 +1,8 @@
-# LangChain Lab
+# ⛓️‍💥 LangChain Lab
 
 ![Status](https://img.shields.io/badge/-Ongoing-F8B84F?style=flat&label=Project&labelColor=23555555)
-![Languages](https://img.shields.io/github/languages/count/tmoesl/python-lab?label=Languages)
-![Top Language](https://img.shields.io/github/languages/top/tmoesl/python-lab?color=white)
 
-LangChain Lab is a comprehensive workspace for exploring and mastering LangChain, an open-source development framework for building LLM applications. It's based on LangChain v0.3 and covers:
+LangChain Lab is part of the AI Lab workspace for exploring and mastering LangChain, an open-source development framework for building LLM applications. It's based on LangChain v0.3 and covers:
 
 - ✅ Chat Models and LLM integrations (20+ providers)
 - ✅ Message types and structured communication
@@ -15,47 +13,45 @@ LangChain Lab is a comprehensive workspace for exploring and mastering LangChain
 
 ## Getting Started
 
-### Prerequisites
-- Python 3.12.8 or higher
-- [uv](https://docs.astral.sh/uv/) package manager
+**Prerequisites:** Python 3.12.8+ and [uv](https://docs.astral.sh/uv/) package manager
 
 ### Installation
 
-1. **Clone and navigate to the project:**
-   ```bash
-   git clone https://github.com/tmoesl/ai-lab
-   cd langchain_lab
-   ```
+```bash
+# 1. Clone Repository
+git clone https://github.com/tmoesl/ai-lab
+cd ai-lab
 
-2. **Install dependencies:**
-   ```bash
-   uv sync
-   ```
+# 2. Install Dependencies
+uv sync --package langchain-lab
 
-3. **Create environment file:**
-   ```bash
-   cp .env.example .env
-   ```
+# 3. Create Environment File
+cp .env.example .env
+```
 
-4. **Add your API keys to `.env`:**
-   ```env
-   # OpenAI
-   OPENAI_API_KEY=your_openai_api_key_here
-   
-   # Anthropic (Claude)
-   ANTHROPIC_API_KEY=your_anthropic_api_key_here
-   
-   # Google (Gemini)
-   GOOGLE_API_KEY=your_google_api_key_here
-   ```
+### Configuration
 
-5. **Run examples:**
-   ```bash
-   uv run python 1_chat_models/1_chat_model_basic.py
-   ```
+Add your API keys to `.env`:
+
+```env
+# OpenAI
+OPENAI_API_KEY=your_openai_api_key_here
+
+# Anthropic (Claude)
+ANTHROPIC_API_KEY=your_anthropic_api_key_here
+
+# Google (Gemini)
+GOOGLE_API_KEY=your_google_api_key_here
+```
+
+### Run Examples
+
+```bash
+uv run python 1_chat_models/1_chat_model_basic.py
+```
 
 
-## 🎯 Learning Path
+## Learning Path
 
 Follow this sequence for optimal learning progression:
 
@@ -80,7 +76,7 @@ Build complex workflows and applications combining prompts, LLMs, and output par
 📁 Folder: [4_chains](4_chains)
 
 
-## Repository Structure
+## Project Structure
 ```
 langchain_lab/
 ├── 1_chat_models/          # Chat model implementations
