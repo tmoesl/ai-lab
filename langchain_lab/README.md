@@ -18,14 +18,14 @@ LangChain Lab is part of the AI Lab workspace for exploring and mastering LangCh
 ### Installation
 
 ```bash
-# 1. Clone Repository
+# 1. Clone repository
 git clone https://github.com/tmoesl/ai-lab
 cd ai-lab
 
-# 2. Install Dependencies
-uv sync --package langchain-lab
+# 2. Install dependencies (--no-dev skips dev packages)
+uv sync --package langchain-lab --no-dev 
 
-# 3. Create Environment File
+# 3. Create environment file
 cp .env.example .env
 ```
 
