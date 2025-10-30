@@ -15,14 +15,14 @@ message = "Hello, how are you?"
 # --------------------------------------------------------------
 
 # Initialise Model
-gpt_4o_mini = init_chat_model(model="gpt-4o-mini", model_provider="openai")
-claude_3_5_sonnet = init_chat_model(model="claude-3-5-sonnet-20240620", model_provider="anthropic")
-gemini_2_5_pro = init_chat_model(model="gemini-2.5-pro", model_provider="google_genai")
+model_openai = init_chat_model(model="gpt-4o-mini", model_provider="openai")
+model_anthropic = init_chat_model(model="claude-3-5-haiku-latest", model_provider="anthropic")
+model_google = init_chat_model(model="gemini-2.5-pro", model_provider="google_genai")
 
 # Invoke Model
-print(f"GPT-4o-mini: {gpt_4o_mini.invoke(message).content}")
-print(f"Claude-3-5-sonnet: {claude_3_5_sonnet.invoke(message).content}")
-print(f"Gemini-2.5-pro: {gemini_2_5_pro.invoke(message).content}")
+print(f"GPT-4o-mini: {model_openai.invoke(message).content}")
+print(f"Claude-3-5-haiku: {model_anthropic.invoke(message).content}")
+print(f"Gemini-2.5-pro: {model_google.invoke(message).content}")
 
 
 # --------------------------------------------------------------
@@ -37,6 +37,6 @@ model_configurable = init_chat_model(
 # Invoke Model
 result_configurable = model_configurable.invoke(
     input=message,
-    config={"model": "claude-3-5-sonnet-20240620", "model_provider": "anthropic"},  # type: ignore
+    config={"model": "claude-3-5-haiku-latest", "model_provider": "anthropic"},  # type: ignore
 )
-print(f"Claude-3-5-sonnet: {result_configurable.content}")
+print(f"Claude-3-5-haiku: {result_configurable.content}")
