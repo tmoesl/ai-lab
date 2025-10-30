@@ -19,9 +19,9 @@ settings = {
 }
 
 # Initialise Model
-model_openai = ChatOpenAI(model="gpt-4o-mini", **settings)
+model = ChatOpenAI(model="gpt-4o-mini", **settings)
 
 # Invoke Model
-result_openai = model_openai.invoke(message)
+result = model.invoke(message)
 
-print(f"OpenAI: {result_openai.content}")
+print(f"OpenAI: {result.content}")
